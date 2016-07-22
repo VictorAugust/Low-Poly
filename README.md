@@ -14,6 +14,6 @@ This will make edge detection much easier by using black-and-white pictures. By 
 
 ![sobel picture](images/blueberry-sobel.png)
 
-And finally by implementing Delaunay Triangulation algorithm, and fill in original picture's color into every triangle, we get:
+And finally by implementing [Delaunay Triangulation algorithm](https://github.com/ironwallaby/delaunay), and fill in original picture's color into every triangle, we get:
 
 ![low poly picture](images/blueberry-poly.png)
