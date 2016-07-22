@@ -113,22 +113,22 @@ function drawImage(event){
     //////
     // ctx.lineWidth = 1;
 
-    // var line = delaunay.triangulate( point );
-    // for ( var i = 0; i < line.length; i += 3 ) {
-    //     ctx.beginPath();
-    //     var x = point[line[i]][0], y = point[line[i]][1];
-    //     ctx.moveTo( x, y );
-    //     ctx.lineTo( point[line[i + 1]][0], point[line[i + 1]][1] );
-    //     ctx.lineTo( point[line[i + 2]][0], point[line[i + 2]][1] );
-    //     ctx.closePath();
-    //     var my = ((y + point[line[i + 1]][1] + point[line[i + 2]][1]) / 3) << 0;
-    //     var mx = ((x + point[line[i + 1]][0] + point[line[i + 2]][0]) / 3) << 0;
-    //     var oindex = (my * imagePixel.width + mx) * 4;
-    //     ctx.strokeStyle = "rgba(" + oimagePixel.data[oindex] + "," + oimagePixel.data[oindex + 1] + "," + oimagePixel.data[oindex + 2] + ",1)";
-    //     ctx.fillStyle = "rgba(" + oimagePixel.data[oindex] + "," + oimagePixel.data[oindex + 1] + "," + oimagePixel.data[oindex + 2] + ",1)";
-    //     ctx.stroke();
-    //     ctx.fill();
-    // }
+    var line = delaunay.triangulate( point );
+    for ( var i = 0; i < line.length; i += 3 ) {
+        ctx.beginPath();
+        var x = point[line[i]][0], y = point[line[i]][1];
+        ctx.moveTo( x, y );
+        ctx.lineTo( point[line[i + 1]][0], point[line[i + 1]][1] );
+        ctx.lineTo( point[line[i + 2]][0], point[line[i + 2]][1] );
+        ctx.closePath();
+        var my = ((y + point[line[i + 1]][1] + point[line[i + 2]][1]) / 3) << 0;
+        var mx = ((x + point[line[i + 1]][0] + point[line[i + 2]][0]) / 3) << 0;
+        var oindex = (my * imagePixel.width + mx) * 4;
+        ctx.strokeStyle = "rgba(" + oimagePixel.data[oindex] + "," + oimagePixel.data[oindex + 1] + "," + oimagePixel.data[oindex + 2] + ",1)";
+        ctx.fillStyle = "rgba(" + oimagePixel.data[oindex] + "," + oimagePixel.data[oindex + 1] + "," + oimagePixel.data[oindex + 2] + ",1)";
+        ctx.stroke();
+        ctx.fill();
+    }
 
 }
 

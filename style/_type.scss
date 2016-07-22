@@ -1,0 +1,76 @@
+h1{
+	font-family: $title-font-family;
+	font-size:70px;
+	font-weight:$base-font-weight;
+	border: 2px red;
+	margin:0;
+}
+
+h2{
+	font-family: Montserrat;
+	font-size:25px;
+	font-weight:300;
+	line-height: 1.45;
+	letter-spacing: normal;
+}
+
+h3{
+	font-family: Montserrat;
+	font-size:16px;
+	font-weight:normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0 0 20px 0;
+}
+
+a:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    // TODO: need to fix this problem
+    margin-top: -4%; // used to fix a unknown problem I have..
+}
+
+/***************************************
+	LINES AROUND TITLE FEATURE
+****************************************/
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  top: 0;
+  width: 90px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+
+svg {
+	display: block;
+	margin: auto;
+}
